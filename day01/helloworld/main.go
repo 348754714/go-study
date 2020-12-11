@@ -23,6 +23,10 @@ import "fmt"
 //go build
 
 // 函数外面只能放置标识符（变量，常量，函数，类型）的声名
-func main(){
+//go build 当前目录可执行文件
+//go build -o "a.exe" 编译并指定文件名称
+//go run main.go 脚本执行
+//go install 先编译后拷贝
+func main() {
 	fmt.Println("Hellor world!")
 }
