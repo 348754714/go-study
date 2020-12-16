@@ -32,6 +32,18 @@ func main() {
 	//	fmt.Printf("%d %c\n", i, v)
 	//}
 
+	// for跳出
+	for i := 1; i < 10; i++ {
+		if i == 5 {
+			break
+		}
+	}
+	// for 跳过
+	for i := 1; i < 10; i++ {
+		if i == 5 {
+			continue
+		}
+	}
 	// 99乘法表
 	for i := 1; i < 10; i++ {
 		for j := 1; j <= i; j++ {
