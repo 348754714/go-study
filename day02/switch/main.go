@@ -28,17 +28,33 @@ func main() {
 
 	switch n2 := 1; n2 {
 	case 1, 2, 3, 4, 5:
+		fmt.Println("奇数")
 	case 6, 7, 8, 9, 10:
+		fmt.Println("偶数")
 	default:
 	}
 
-	var n3 = 10
-	switch n3 {
+	var n3 = 8
+	switch {
 	case n3 > 10:
 		fmt.Println(n3)
 	case n3 < 10:
 		fmt.Println(n3)
 	default:
+		fmt.Println("hhhh")
+	}
+
+	s := "a"
+	switch {
+	case s == "a":
+		fmt.Println("a")
+		fallthrough // case下穿
+	case s == "b":
+		fmt.Println("b") // 输出ab
+	case s == "c":
+		fmt.Println("c")
+	default:
+		fmt.Println("...")
 	}
 
 }
