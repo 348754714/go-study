@@ -16,7 +16,7 @@ func main() {
 	//	fmt.Println(s[i]) // 无法处理中文
 	//	//fmt.Printf("%c\n", s[i]) // 无法处理中文
 	//}
-
+	// 判断汉字数量
 	var count int
 	for _, c := range s {
 		if unicode.Is(unicode.Han, c) {

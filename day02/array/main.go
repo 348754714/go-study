@@ -20,6 +20,8 @@ func main() {
 	// 初始化方式3 根据索引
 	a5 := [5]int{0: 1, 4: 2} // 根据索引
 	fmt.Println(a5)
+	a6 := [...]int{0: 1, 100: 2} // 根据索引
+	fmt.Println(a6)
 
 	// 数组遍历
 	citys := [3]string{"beijing", "shanghai", "wuhan"}
@@ -40,6 +42,14 @@ func main() {
 		[2]int{3, 4},
 	}
 	fmt.Println(a11)
+
+	// 多为数组只有最外层能用...
+	all1 := [...][2]int{
+		[...]int{1, 2},
+		[...]int{2, 3},
+		[...]int{3, 4},
+	}
+	fmt.Println(all1)
 
 	// 数组是值类型
 	b1 := [3]int{1, 2, 3}

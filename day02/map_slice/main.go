@@ -26,12 +26,29 @@ func main() {
 	fmt.Println(ret)
 	m2 := make(map[string]int, 10)
 	for _, v := range ret {
+		//v := ret[i]
 		_, ok := m2[v]
 		if !ok {
 			m2[v] = 1
 		} else {
-			m2[v] += m2[v]
+			m2[v] = m2[v] + 1
 		}
 	}
 	fmt.Println(m2)
+
+	// 回文判断
+	str1 := "上海自来水来自海上"
+	//str2 := "山西运煤车煤运西山"
+	//srt3 := "黄山落叶松叶落山黄"
+	r := make([]rune, 0)
+	for _, c := range str1 {
+		r = append(r, c)
+	}
+	for i := 0; i < len(r)/2; i++ {
+		if r[i] != r[len(r)-1-i] {
+			fmt.Println("not")
+			return
+		}
+	}
+	fmt.Println("yes")
 }
